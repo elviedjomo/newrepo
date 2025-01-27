@@ -1,0 +1,29 @@
+<servers>
+  <server>
+    <id>visualpath-vprofile-maven-repo1</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>visualpath-vprofile-maven-repo1</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>visualpath-vprofile-maven-repo1</id>
+        <url>https://visualpath-503561459342.d.codeartifact.us-east-1.amazonaws.com/maven/vprofile-maven-repo1/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>visualpath-vprofile-maven-repo1</id>
+    <name>visualpath-vprofile-maven-repo1</name>
+    <url>https://visualpath-503561459342.d.codeartifact.us-east-1.amazonaws.com/maven/vprofile-maven-repo1/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
